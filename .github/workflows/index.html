@@ -1,0 +1,32 @@
+<!-- 1. الهيكل وعرض البيانات -->
+<template>
+  <div class="box">
+    <h2>العداد: {{ count }}</h2>
+    <button @click="increment">زيادة</button>
+  </div>
+</template>
+
+<!-- 2. منطق العمل والبرمجة (JavaScript) -->
+<script setup>
+import { ref } from 'vue'
+
+// تعريف متغير تفاعلي
+const count = ref(0)
+
+// دالة لزيادة العداد
+const increment = () => {
+  count.value++
+}
+</script>
+
+<!-- 3. التصميم والألوان الخاص بهذا المكون فقط -->
+<style scoped>
+.box {
+  padding: 20px;
+  text-align: center;
+}
+button {
+  background-color: #42b883;
+  color: white;
+}
+</style>
